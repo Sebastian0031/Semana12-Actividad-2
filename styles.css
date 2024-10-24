@@ -1,0 +1,29 @@
+.galeria {
+    display: flex; /* activa el modelo Flexbox para el contenedor */ 
+    flex-wrap: wrap; /* permite que los elementos se ajunten a multiples lineas */
+    justify-content: center; /* alinea los elementos en horizontalmente */
+    gap: 10px; /* espaciado entre los elementos */
+}
+
+.galeria img { /* estilos para las imagenes */
+    width: 23%; /* ancho de las imagnes en 23% del ancho del contenedor */
+    height: auto; /* Mantiene la posicion de la imagen */
+    object-fit: cover; /* ajusta la imagen para que se adapte al tamaño del contenedor */
+}
+
+.galeria img {
+    border-radius: 5px; /* bordes redondeados para las imagenes */
+    box-shadow: 0px 2px 5px rgba (0, 0, 0, 0.2); /* efecto de sombra para las imagenes */
+    transition: all 0.3s ease; /* animacion de transicion al pasar el cursor */
+}
+@media (max-width: 768px) {
+    .galeria img {
+        width: 48%;/* aumento el ancho de las imagenes en 48% en pantallas nas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria img  {
+        width: 95%; /* aumento el ancho a 95% en pantallas muy pequeñas */
+    }
+}
